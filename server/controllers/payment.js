@@ -7,8 +7,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const instance = new Razorpay({
-    key_id: process.env.RAZORPAY_KEY_ID || 'rzp_test_S0GtaBV0jrZAxD',
-    key_secret: process.env.RAZORPAY_KEY_SECRET || 'nyBzlY6BixO2NoBQgpb30Gny',
+    key_id: process.env.RAZORPAY_KEY_ID || 'rzp_key_id',
+    key_secret: process.env.RAZORPAY_KEY_SECRET || 'secret_key',
 });
 
 const sendInvoice = async (email, plan, amount, orderId) => {

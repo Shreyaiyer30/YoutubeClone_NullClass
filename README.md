@@ -1,83 +1,182 @@
-
 # YouTubeClone-NullClass
 
-## Introduction
-This project involved enhancing a YouTube-inspired web application with three primary features: a points allocation system for watching videos, a custom video player with gesture-based controls, and a VoIP feature for video calls and screen sharing. The objective was to create an engaging and interactive user experience while maintaining functionality and ease of use.
+---
 
-## Features
-### 1. Points System
-- Allocate 5 points for each video watched.
-- Points are displayed in the user profile section.
+## 📌 Introduction
 
-### 2. Custom Video Player
-- Double Tap on Right Side: Playback moves 10 seconds forward.
-- Double Tap on Left Side: Playback moves 10 seconds backward.
-- Single Tap in Middle: Pause the video.
-- Three Taps in Middle: Move to next video.
-- Three Taps on Right Side: Close the website.
-- Three Taps on Left Side: Show the comment section.
-- Single Tap on Top Right Corner: Display current location and temperature.
-- Hold Right Side: Play video at 2X speed.
-- Hold Left Side: Play video at 0.5X speed.
+**YouTubeClone-NullClass** is a YouTube-inspired web application designed to enhance user engagement through gamification, advanced video interactions, and real-time communication features.
 
-### 3. VoIP Feature
-- Video calling with screen sharing and recording capabilities.
-- Calls are enabled only from 6 PM to 12 AM.
+The project focuses on:
 
-## Setup Instructions
+* User engagement
+* Interactive video playback
+* Monetization through subscription plans
+* Real-time communication using VoIP
+
+---
+
+## ✨ Features
+
+---
+
+### 🎯 1. Points System
+
+* Users earn **5 points** for every video watched
+* Points are displayed in the **User Profile** section
+
+---
+
+### 🎥 2. Custom Gesture-Based Video Player
+
+The video player supports advanced touch gestures:
+
+* **Double Tap (Right):** Skip forward 10 seconds
+* **Double Tap (Left):** Skip backward 10 seconds
+* **Single Tap (Center):** Pause video
+* **Three Taps (Center):** Play next video
+* **Three Taps (Right):** Close the website
+* **Three Taps (Left):** Open comments section
+* **Single Tap (Top-Right):** Show current location & temperature
+* **Hold (Right):** Play video at 2× speed
+* **Hold (Left):** Play video at 0.5× speed
+
+---
+
+### 📞 3. VoIP Feature
+
+* Video calling between users
+* Screen sharing of the YouTube website
+* Recording of video call sessions (saved locally)
+* Calls allowed only between **6 PM – 12 AM**
+
+---
+
+## 🌐 Hosting & Deployment
+
+---
+
 ### Frontend
-The frontend is hosted on Vercel: [YouTube Clone Frontend](https://you-tube-clone-frontend-xi.vercel.app/)
-   
+
+* Hosted on **Vercel**
+
 ### Backend
-The backend is hosted on Render: [YouTube Clone Backend](https://youtubeclone-nullclass.onrender.com/)
 
-**Note:** If the frontend does not load correctly, please reload the Render site as it may be required due to free tier limitations.
+* Hosted on **Render**
 
-### Local Setup
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/AthulTM/YouTubeClone-NullClass.git
-   cd YouTubeClone-NullClass
-   ```
+> ⚠️ **Note:** If the frontend does not load correctly, refresh the backend on Render due to free-tier limitations.
 
-2. Install dependencies:
-   - Frontend:
-     ```sh
-     cd client
-     npm install
-     npm start
-     ```
-   - Backend:
-     ```sh
-     cd server
-     npm install
-     npm start
-     ```
+---
 
-## Internship Report
-The detailed internship report is available [here](./report.docx).
+## ⚙️ Local Setup Instructions
 
-## Challenges and Solutions
-### Challenge 1: Implementing Gesture Controls
-**Solution:** Implemented gesture controls by adding reference to the video element and handling taps with conditional statements.
+---
 
-### Challenge 2: VoIP Feature
-**Solution:** Used React Media Recorder for recording and ensured that both video and audio streams were recorded.
+### 🔹 Clone the Repository
 
-### Challenge 3: Implementing Video Stream on Vercel
-**Solution:** Used UseEffect hooks to ensure correct stream rendering on load.
+```bash
+git clone https://github.com/AthulTM/YouTubeClone-NullClass.git
+cd YouTubeClone-NullClass
+```
 
-### Challenge 4: Hosting and Deployment
-**Solution:** Deployed backend on Render and frontend on Vercel due to static file serving issues with Vercel.
+---
 
-## Skills and Competencies
-- Proficiency in React.
-- Experience with video player libraries and custom gesture controls.
-- Knowledge of WebRTC for VoIP features.
-- Understanding of hosting web applications on platforms like Netlify or Vercel.
+### 🔹 Frontend Setup
 
-## Feedback and Evidence
-Users appreciated the intuitive gesture controls and the seamless integration of the video call feature. Feedback was collected through user testing sessions.
+```bash
+cd client
+npm install
+npm start
+```
 
-## Conclusion
-The project achieved its objectives of enhancing user engagement and functionality. The points system, custom video player, and VoIP feature significantly improved the user experience.
+---
+
+### 🔹 Backend Setup
+
+```bash
+cd server
+npm install
+npm start
+```
+
+---
+
+## 🚀 Internship Enhancements Implemented
+
+---
+
+### 💬 Comment System
+
+* Multilingual comments support
+* Comment translation to preferred language
+* Like and dislike options
+* Auto-delete comments after **2 dislikes**
+* Block comments with special characters
+* Display **exact city name** with comments
+
+---
+
+### ⬇️ Video Download Feature
+
+* Free users: **1 video download per day**
+* Downloaded videos shown in **Profile → Downloads**
+* Premium users: unlimited downloads
+* Razorpay payment gateway (test mode)
+
+---
+
+### 💳 Subscription Plans
+
+| Plan   | Watch Time Limit | Price |
+| ------ | ---------------- | ----- |
+| Free   | 5 minutes        | ₹0    |
+| Bronze | 7 minutes        | ₹10   |
+| Silver | 10 minutes       | ₹50   |
+| Gold   | Unlimited        | ₹100  |
+
+* Razorpay payment integration
+* Invoice sent to user via email after successful payment
+
+---
+
+### 🎨 Dynamic Theme & Authentication
+
+#### Theme Selection
+
+* **White Theme**
+
+  * Login between **10 AM – 12 PM**
+  * Location: Tamil Nadu, Kerala, Karnataka, Andhra Pradesh, Telangana
+
+* **Dark Theme**
+
+  * All other timings and locations
+
+#### OTP Verification
+
+* South India users → **Email OTP**
+* Other states → **Mobile OTP**
+
+---
+
+## 🛠️ Technologies Used
+
+* React.js
+* Node.js & Express.js
+* MongoDB
+* WebRTC
+* Razorpay
+* Vercel & Render
+
+---
+
+## ✅ Conclusion
+
+YouTubeClone-NullClass is a feature-rich full-stack application showcasing advanced frontend interactions, backend integrations, real-time communication, and monetization strategies.
+
+This project demonstrates strong proficiency in:
+
+* React development
+* API design
+* WebRTC implementation
+* Payment gateway integration
+* Cloud deployment
