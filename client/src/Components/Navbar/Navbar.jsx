@@ -6,7 +6,7 @@ import { RiVideoAddLine } from "react-icons/ri";
 import { BiUserCircle } from "react-icons/bi";
 import { Link, useNavigate } from "react-router-dom";
 import { IoMdNotificationsOutline } from "react-icons/io";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import Auth from "../../Pages/Auth/Auth";
 import ThemeToggle from "../../Context/ThemeToggle";
 

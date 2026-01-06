@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { clearHistory } from "../../actions/History";
-import LeftSidebar from "../LeftSidebar/LeftSidebar";
+// import LeftSidebar from "../LeftSidebar/LeftSidebar";
 
 import "./WHLcss.css";
 import WHLVideoList from "./WHLVideoList";

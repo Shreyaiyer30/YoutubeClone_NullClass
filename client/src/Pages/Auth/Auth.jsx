@@ -1,4 +1,5 @@
-import React, { useState, useContext } from "react";
+import { useState } from "react";
+import React from "react";
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { auth } from "../../firebase";
 import { BiLogOut } from "react-icons/bi";
@@ -7,7 +8,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { setCurrentUser } from "../../actions/currentUser";
 import { login } from "../../actions/auth";
 import "./Auth.css";
-import { ThemeContext } from "../../Context/ThemeContext";
+// import { ThemeContext } from "../../Context/ThemeContext";
 import * as api from '../../api';
 
 const googleProvider = new GoogleAuthProvider();
