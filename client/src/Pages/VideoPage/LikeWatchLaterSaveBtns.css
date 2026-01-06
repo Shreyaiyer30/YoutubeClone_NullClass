@@ -1,0 +1,306 @@
+.btns_cont_videoPage {
+    display: flex;
+    flex-grow: 5;
+    flex-direction: row-reverse;
+}
+
+.btn_VideoPage {
+    margin: auto 0;
+    display: flex;
+}
+
+.like_videoPage {
+    margin: 0.5rem;
+    display: flex;
+    cursor: pointer;
+}
+
+.btns_videoPage {
+    margin: auto 0.5rem;
+}
+
+.btns_cont_videoPage {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.btn_VideoPage {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.more-options-btn {
+    background: transparent;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.more-options-btn:hover {
+    background-color: var(--hover-color);
+}
+
+.more-options-btn:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.more-options-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--bg-primary);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-color);
+    min-width: 200px;
+    z-index: 1000;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+}
+
+.more-option-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-align: left;
+    transition: background-color 0.2s ease;
+}
+
+.more-option-item:hover {
+    background-color: var(--hover-color);
+}
+
+.more-option-item:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.more-option-item svg {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+}
+
+.more-options-divider {
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 0.5rem 0;
+}
+
+.report-btn span {
+    color: var(--danger-color, #ff4444);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.action-buttons button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.action-buttons button:hover:not(:disabled) {
+    background-color: var(--hover-color);
+    transform: translateY(-1px);
+}
+
+.action-buttons button:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.action-buttons button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.action-buttons button.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.action-buttons button.active:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Specific button styles */
+.like-btn.active {
+    background-color: var(--success-color, #4CAF50);
+    border-color: var(--success-color, #4CAF50);
+}
+
+.dislike-btn.active {
+    background-color: var(--danger-color, #ff4444);
+    border-color: var(--danger-color, #ff4444);
+}
+
+.save-btn.active {
+    background-color: var(--warning-color, #ff9800);
+    border-color: var(--warning-color, #ff9800);
+}
+
+.download-btn.downloading {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.btn-count {
+    font-weight: 600;
+    min-width: 20px;
+    text-align: center;
+}
+
+.btn-label {
+    font-weight: 500;
+}
+
+/* Tooltip styles */
+.action-buttons button[title] {
+    position: relative;
+}
+
+.action-buttons button[title]:hover::before {
+    content: attr(title);
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--tooltip-bg, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    z-index: 1001;
+}
+
+.action-buttons button[title]:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-bottom-color: var(--tooltip-bg, rgba(0, 0, 0, 0.8));
+    z-index: 1001;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .btns_cont_videoPage {
+        gap: 0.5rem;
+    }
+
+    .action-buttons {
+        gap: 0.25rem;
+    }
+
+    .action-buttons button {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    .btn-label {
+        display: none;
+        /* Hide labels on mobile */
+    }
+
+    .btn-count {
+        display: block;
+        /* Keep counts visible */
+    }
+
+    .action-buttons button {
+        border-radius: 50%;
+        padding: 0.5rem;
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+    }
+
+    .action-buttons button span:not(.btn-count) {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .btns_cont_videoPage {
+        justify-content: center;
+    }
+
+    .more-options-menu {
+        left: auto;
+        right: 0;
+    }
+
+    .action-buttons {
+        justify-content: center;
+    }
+}
+
+/* Toast notification customizations */
+.Toastify__toast {
+    font-family: inherit;
+    border-radius: 8px;
+}
+
+.Toastify__toast--success {
+    background-color: var(--success-color, #4CAF50);
+}
+
+.Toastify__toast--error {
+    background-color: var(--danger-color, #ff4444);
+}
+
+.Toastify__toast--warning {
+    background-color: var(--warning-color, #ff9800);
+}
+
+.Toastify__toast--info {
+    background-color: var(--primary-color, #3ea6ff);
+}

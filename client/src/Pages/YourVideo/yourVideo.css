@@ -1,0 +1,21 @@
+.container_yourvideo {
+    padding: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+    color: var(--text-color, white);
+}
+
+.container_yourvideo h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container_yourvideo h3 {
+    text-align: center;
+    margin-top: 40px;
+    color: #aaa;
+    font-weight: 500;
+}

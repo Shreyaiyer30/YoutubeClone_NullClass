@@ -1,0 +1,506 @@
+/* LeftSidebar.css */
+/* Main Left Sidebar (Small) */
+.container_leftSidebar {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Scrollbar styling */
+.container_leftSidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.container_leftSidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.container_leftSidebar::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 2px;
+}
+
+.icon_sidebar_div {
+  cursor: pointer;
+  color: var(--text-secondary);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  margin: 0.25rem;
+}
+
+.icon_sidebar {
+  color: var(--text-primary);
+  transition: color 0.2s ease;
+}
+
+.text_sidebar_icon {
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.7rem;
+  margin-top: 0.5rem;
+  color: var(--text-primary);
+  transition: color 0.2s ease;
+}
+
+.icon_sidebar_div:hover {
+  background-color: var(--hover-color);
+}
+
+.icon_sidebar_div:hover .icon_sidebar,
+.icon_sidebar_div:hover .text_sidebar_icon {
+  color: var(--primary-color);
+}
+
+.icon_sidebar_div.active {
+  background-color: var(--hover-color);
+}
+
+.icon_sidebar_div.active .icon_sidebar,
+.icon_sidebar_div.active .text_sidebar_icon {
+  color: var(--primary-color);
+}
+
+/* Drawer Sidebar (Large) */
+.container_DrawaerLeftSidebar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2000;
+  pointer-events: none;
+}
+
+.container_DrawaerLeftSidebar[style*="display: flex"] {
+  pointer-events: all;
+}
+
+.container2_DrawaerLeftSidebar {
+  background-color: var(--bg-primary);
+  width: 240px;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.5);
+  z-index: 2001;
+  transform: translateX(-100%);
+  animation: slideIn 0.3s ease forwards;
+  pointer-events: all;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.container3_DrawaerLeftSidebar {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  pointer-events: all;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Scrollbar styling for drawer */
+.container2_DrawaerLeftSidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.container2_DrawaerLeftSidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.container2_DrawaerLeftSidebar::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+
+/* User Profile Section */
+.user_profile_section {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 0.5rem;
+}
+
+.user_profile_info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.user_avatar_sidebar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FF0000, #CC0000);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.user_details_sidebar {
+  flex: 1;
+  min-width: 0;
+}
+
+.user_name_sidebar {
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user_email_sidebar {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user_stats {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.stat_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.stat_number {
+  color: var(--text-primary);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.stat_label {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+/* Section Headers */
+.section_header {
+  padding: 0.5rem 1.5rem;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subscription_count {
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 0.7rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 10px;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* Sidebar Items - Drawer Version */
+.container2_DrawaerLeftSidebar .icon_sidebar_div {
+  display: block;
+  text-decoration: none;
+  padding: 0.6rem 1.5rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 0;
+  margin: 0;
+}
+
+.container2_DrawaerLeftSidebar .icon_sidebar_div:hover {
+  background-color: var(--hover-color);
+}
+
+.container2_DrawaerLeftSidebar .icon_sidebar_div.active {
+  background-color: var(--hover-color);
+}
+
+.container2_DrawaerLeftSidebar .icon_sidebar_div.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background-color: var(--primary-color);
+}
+
+.sidebar_item_content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.sidebar_icon_wrapper {
+  width: 22px;
+  display: flex;
+  justify-content: center;
+}
+
+.container2_DrawaerLeftSidebar .icon_sidebar {
+  color: var(--text-primary);
+  transition: color 0.2s ease;
+}
+
+.container2_DrawaerLeftSidebar .icon_sidebar_div:hover .icon_sidebar {
+  color: var(--primary-color);
+}
+
+.container2_DrawaerLeftSidebar .icon_sidebar_div.active .icon_sidebar {
+  color: var(--primary-color);
+}
+
+.container2_DrawaerLeftSidebar .text_sidebar_icon {
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-weight: 400;
+  white-space: nowrap;
+  flex: 1;
+}
+
+/* Premium Section */
+.premium_section {
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.premium_content {
+  position: relative;
+}
+
+.premium_icon {
+  color: #FFD700;
+}
+
+.premium_badge {
+  background: linear-gradient(45deg, #FFD700, #FFA500);
+  color: #000;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Subscriptions */
+.subScriptions_lsdbar {
+  padding: 0.5rem 0;
+}
+
+.chanel_lsdbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.6rem 1.5rem;
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.chanel_lsdbar:hover {
+  background-color: var(--hover-color);
+}
+
+.channel_logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.channel_name {
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.show_more_channels {
+  padding: 0.8rem 1.5rem;
+  text-align: center;
+}
+
+.show_more_channels a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.show_more_channels a:hover {
+  text-decoration: underline;
+}
+
+/* Trending Section */
+.trending_section {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.trending_item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.6rem 1.5rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.trending_item:hover {
+  background-color: var(--hover-color);
+}
+
+.trending_icon {
+  color: #FF0000;
+  flex-shrink: 0;
+}
+
+/* YouTube Extra Section */
+.youtube_extra {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.youtube_extra_item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.6rem 1.5rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.youtube_extra_item:hover {
+  background-color: var(--hover-color);
+}
+
+.youtube_icon {
+  color: #FF0000;
+  flex-shrink: 0;
+}
+
+/* Settings Section */
+.settings_section {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.settings_item {
+  display: block;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.settings_content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.6rem 1.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.settings_item:hover .settings_content {
+  background-color: var(--hover-color);
+}
+
+.settings_icon {
+  width: 22px;
+  display: flex;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.settings_text {
+  font-size: 0.9rem;
+}
+
+/* Footer */
+.sidebar_footer {
+  padding: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.footer_links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.footer_links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.footer_links a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.copyright {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}

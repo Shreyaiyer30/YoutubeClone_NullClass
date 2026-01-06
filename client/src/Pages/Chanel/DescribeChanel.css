@@ -1,0 +1,103 @@
+.container3_chanel {
+    padding: 32px 24px;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 24px;
+}
+
+.chanel_logo_chanel {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #555;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+.chanel_logo_chanel b {
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.description_chanel {
+    text-align: center;
+    max-width: 800px;
+}
+
+.description_chanel b {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.description_chanel p {
+    font-size: 14px;
+    color: #aaa;
+    line-height: 1.5;
+}
+
+.uploadbtn_chanel,
+.editbtn_chanel {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    background-color: #3ea6ff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 18px;
+    color: #0f0f0f;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+}
+
+.uploadbtn_chanel {
+    top: 70px;
+}
+
+.uploadbtn_chanel:hover,
+.editbtn_chanel:hover {
+    background-color: #65b8ff;
+    color: #0f0f0f;
+    border: none;
+}
+
+@media (max-width: 600px) {
+    .container3_chanel {
+        align-items: flex-start;
+        padding: 16px;
+    }
+
+    .chanel_logo_chanel {
+        width: 80px;
+        height: 80px;
+    }
+
+    .chanel_logo_chanel b {
+        font-size: 32px;
+    }
+
+    .description_chanel {
+        text-align: left;
+    }
+
+    .uploadbtn_chanel,
+    .editbtn_chanel {
+        position: static;
+        margin-top: 12px;
+        width: fit-content;
+        display: inline-flex;
+        margin-right: 12px;
+    }
+}

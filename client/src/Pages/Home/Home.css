@@ -1,0 +1,37 @@
+.navigation_Home {
+    color: white;
+    background-color: rgb(37, 37, 37);
+    position: sticky;
+    display: flex;
+    overflow-x: auto;
+    top: 0;
+    border-bottom: 2px solid rgb(128, 128, 128, 0.27);
+}
+
+.btn_nav_home {
+    background-color: rgb(46, 46, 46);
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 45px;
+    cursor: pointer;
+}
+
+.btn_nav_home:hover {
+    background-color: rgb(128, 128, 128);
+}
+
+/* Home.css */
+.home_container {
+    width: 100%;
+    min-height: calc(100vh - 3.5rem);
+    padding: 1rem;
+    background-color: var(--bg-primary);
+    /* margin-left handled by main_content_container */
+}
+
+/* For mobile */
+@media (max-width: 768px) {
+    .home_container {
+        padding: 0.5rem;
+    }
+}

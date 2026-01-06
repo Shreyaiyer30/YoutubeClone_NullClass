@@ -1,0 +1,241 @@
+.container_videoPage {
+  height: calc(100vh - 3.4rem);
+  overflow-y: auto;
+  background-color: rgb(11, 11, 11);
+  color: white;
+}
+
+.container2_videoPage {
+  margin: 1.5rem 4.5rem;
+  display: flex;
+}
+
+.video_display_screen_videoPage {
+  width: calc(100vw - 4.5rem - 35vw);
+  padding: 1rem;
+  position: relative;
+}
+
+.video_ShowVideo_videoPage {
+  padding: 0.1rem;
+  height: 70vh;
+  width: 100%;
+  background-color: black;
+  border: 1px solid rgba(37, 37, 37, 0.2);
+}
+
+.video_btns_title_VideoPage_cont {
+  border-bottom: 3px solid rgba(245, 222, 179, 0.175);
+  flex-grow: 1;
+}
+
+.video_title_VideoPage {
+  font-size: x-large;
+  margin: 0;
+  padding: 1rem 0.8rem;
+}
+
+.views_date_btns_VideoPage {
+  display: flex;
+  margin: 0.5rem 1rem;
+  width: calc(100vw - 6.5rem - 35vw);
+}
+
+.views_videoPage {
+  display: flex;
+  font-size: 0.8rem;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.chanel_details_videoPage {
+  border-bottom: 3px solid rgba(245, 222, 179, 0.175);
+  display: flex;
+  text-decoration: none;
+  color: aliceblue;
+  font-weight: bolder;
+}
+
+.chanel_logo_videoPage {
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.19);
+  width: 4rem;
+  height: 4rem;
+  margin: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.667);
+  border-radius: 100%;
+}
+
+.chanel_logo_videoPage p {
+  color: black;
+  margin: auto;
+  font-size: xx-large;
+}
+
+.chanel_name_videoPage {
+  font-weight: bolder;
+  margin: auto 1rem;
+  font-size: larger;
+}
+
+.comments_VideoPage {
+  width: 100%;
+  padding-inline-start: 0.5rem;
+}
+
+.moreVideoBar {
+  width: calc(100vw - 4.5rem - 70vw);
+  padding: 0 1rem;
+}
+
+.location-temp-popup {
+  position: absolute;
+  top: 18px;
+  left: 40%;
+  background-color: lightgray;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000;
+  font-size: 14px;
+}
+
+.subscribe_btn_container {
+  margin: auto 1rem;
+}
+
+.subscribe_btn {
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.subscribe_btn.subscribed {
+  background-color: #303030;
+  color: #aaa;
+}
+
+.video_description_videoPage {
+  margin: 1rem 0;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  white-space: pre-wrap;
+  font-size: 0.9rem;
+}
+
+/* Subscription styles */
+.channel_subscribe_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.chanel_details_videoPage {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex: 1;
+}
+
+.channel_info {
+  margin-left: 1rem;
+}
+
+.subscriber_count {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.subscribe_btn_container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.subscribe_btn {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.subscribe_btn:hover:not(:disabled) {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.subscribe_btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.subscribe_btn.subscribed {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.subscribe_btn.subscribed:hover {
+  background-color: var(--hover-color);
+}
+
+.subscribed-icon {
+  font-size: 1.2rem;
+}
+
+.loading-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.notification_bell {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 0.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.2s ease;
+}
+
+.notification_bell:hover {
+  background-color: var(--hover-color);
+  color: var(--text-primary);
+}

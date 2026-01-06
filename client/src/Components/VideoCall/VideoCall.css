@@ -1,0 +1,87 @@
+.videocall_container {
+    padding: 20px;
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.peer_id_box {
+    margin: 20px 0;
+    font-size: 1.2rem;
+    background: var(--bg-secondary);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.id_display {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.call_form {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 10px;
+}
+
+.call_form input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    width: 300px;
+}
+
+.call_form button {
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    /* e.g. red */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.video_grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.video_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    min-width: 300px;
+}
+
+.video_player {
+    width: 100%;
+    border-radius: 10px;
+    background-color: black;
+    border: 2px solid var(--border-color);
+}
+
+.controls {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.control_btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.record_active {
+    background-color: red;
+    color: white;
+    border-color: red;
+}

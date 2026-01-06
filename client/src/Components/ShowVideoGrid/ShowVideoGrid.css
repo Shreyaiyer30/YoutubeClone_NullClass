@@ -1,0 +1,22 @@
+.Container_ShowVideoGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--bg-color, #0f0f0f);
+}
+
+.video_box_app {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+    .Container_ShowVideoGrid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+}
