@@ -1,137 +1,182 @@
-YouTubeClone-NullClass
-Introduction
+# YouTubeClone-NullClass
 
-YouTubeClone-NullClass is a YouTube-inspired web application developed to enhance user engagement through gamification, advanced video interactions, and real-time communication. The project integrates a points-based reward system, a custom gesture-controlled video player, and VoIP functionality for video calling and screen sharing.
+---
 
-Features
-1. Points System
+## 📌 Introduction
 
-Users earn 5 points for each video watched
+**YouTubeClone-NullClass** is a YouTube-inspired web application designed to enhance user engagement through gamification, advanced video interactions, and real-time communication features.
 
-Points are displayed in the user profile
+The project focuses on:
 
-2. Custom Gesture-Based Video Player
+* User engagement
+* Interactive video playback
+* Monetization through subscription plans
+* Real-time communication using VoIP
 
-The video player supports the following gestures:
+---
 
-Double tap (Right): Skip forward 10 seconds
+## ✨ Features
 
-Double tap (Left): Skip backward 10 seconds
+---
 
-Single tap (Center): Pause video
+### 🎯 1. Points System
 
-Three taps (Center): Play next video
+* Users earn **5 points** for every video watched
+* Points are displayed in the **User Profile** section
 
-Three taps (Right): Close website
+---
 
-Three taps (Left): Open comments section
+### 🎥 2. Custom Gesture-Based Video Player
 
-Single tap (Top-right): Show current location & temperature
+The video player supports advanced touch gestures:
 
-Hold (Right): Play at 2× speed
+* **Double Tap (Right):** Skip forward 10 seconds
+* **Double Tap (Left):** Skip backward 10 seconds
+* **Single Tap (Center):** Pause video
+* **Three Taps (Center):** Play next video
+* **Three Taps (Right):** Close the website
+* **Three Taps (Left):** Open comments section
+* **Single Tap (Top-Right):** Show current location & temperature
+* **Hold (Right):** Play video at 2× speed
+* **Hold (Left):** Play video at 0.5× speed
 
-Hold (Left): Play at 0.5× speed
+---
 
-3. VoIP Feature
+### 📞 3. VoIP Feature
 
-Video calling between users
+* Video calling between users
+* Screen sharing of the YouTube website
+* Recording of video call sessions (saved locally)
+* Calls allowed only between **6 PM – 12 AM**
 
-Screen sharing of the YouTube website
+---
 
-Recording functionality (saved locally)
+## 🌐 Hosting & Deployment
 
-Calls allowed only between 6 PM – 12 AM
+---
 
-Hosting & Deployment
-Frontend
+### Frontend
 
-Hosted on Vercel
+* Hosted on **Vercel**
 
-Backend
+### Backend
 
-Hosted on Render
+* Hosted on **Render**
 
-Note: If the frontend does not load correctly, refresh the backend service on Render due to free-tier limitations.
+> ⚠️ **Note:** If the frontend does not load correctly, refresh the backend on Render due to free-tier limitations.
 
-Local Setup Instructions
-Clone Repository
+---
+
+## ⚙️ Local Setup Instructions
+
+---
+
+### 🔹 Clone the Repository
+
+```bash
 git clone https://github.com/AthulTM/YouTubeClone-NullClass.git
 cd YouTubeClone-NullClass
+```
 
-Frontend Setup
+---
+
+### 🔹 Frontend Setup
+
+```bash
 cd client
 npm install
 npm start
+```
 
-Backend Setup
+---
+
+### 🔹 Backend Setup
+
+```bash
 cd server
 npm install
 npm start
+```
 
-Internship Enhancements Implemented
-Comment System
+---
 
-Multilingual comments with translation option
+## 🚀 Internship Enhancements Implemented
 
-Like and dislike functionality
+---
 
-Auto-delete comments with 2 dislikes
+### 💬 Comment System
 
-Reject comments containing special characters
+* Multilingual comments support
+* Comment translation to preferred language
+* Like and dislike options
+* Auto-delete comments after **2 dislikes**
+* Block comments with special characters
+* Display **exact city name** with comments
 
-Display exact city name with comments
+---
 
-Video Download Feature
+### ⬇️ Video Download Feature
 
-Free users: 1 video per day
+* Free users: **1 video download per day**
+* Downloaded videos shown in **Profile → Downloads**
+* Premium users: unlimited downloads
+* Razorpay payment gateway (test mode)
 
-Downloaded videos shown in User Profile → Downloads
+---
 
-Premium users: unlimited downloads
+### 💳 Subscription Plans
 
-Razorpay test payment integration
+| Plan   | Watch Time Limit | Price |
+| ------ | ---------------- | ----- |
+| Free   | 5 minutes        | ₹0    |
+| Bronze | 7 minutes        | ₹10   |
+| Silver | 10 minutes       | ₹50   |
+| Gold   | Unlimited        | ₹100  |
 
-Subscription Plans
-Plan	Watch Time Limit	Price
-Free	5 minutes	₹0
-Bronze	7 minutes	₹10
-Silver	10 minutes	₹50
-Gold	Unlimited	₹100
+* Razorpay payment integration
+* Invoice sent to user via email after successful payment
 
-Payment via Razorpay
+---
 
-Invoice email sent after successful payment
+### 🎨 Dynamic Theme & Authentication
 
-Dynamic Theme & Authentication
+#### Theme Selection
 
-White theme:
+* **White Theme**
 
-Login time between 10 AM – 12 PM
+  * Login between **10 AM – 12 PM**
+  * Location: Tamil Nadu, Kerala, Karnataka, Andhra Pradesh, Telangana
 
-User location in South India (Tamil Nadu, Kerala, Karnataka, Andhra Pradesh, Telangana)
+* **Dark Theme**
 
-Dark theme: All other cases
+  * All other timings and locations
 
-OTP Verification
+#### OTP Verification
 
-South India users → Email OTP
+* South India users → **Email OTP**
+* Other states → **Mobile OTP**
 
-Other states → Mobile OTP
+---
 
-Technologies Used
+## 🛠️ Technologies Used
 
-React.js
+* React.js
+* Node.js & Express.js
+* MongoDB
+* WebRTC
+* Razorpay
+* Vercel & Render
 
-Node.js & Express.js
+---
 
-MongoDB
+## ✅ Conclusion
 
-WebRTC
+YouTubeClone-NullClass is a feature-rich full-stack application showcasing advanced frontend interactions, backend integrations, real-time communication, and monetization strategies.
 
-Razorpay
+This project demonstrates strong proficiency in:
 
-Vercel & Render
-
-Conclusion
-
-YouTubeClone-NullClass demonstrates a modern full-stack application with advanced UX features, real-time communication, monetization models, and cloud deployment. The project highlights strong skills in React, backend APIs, WebRTC, and payment gateway integration.
+* React development
+* API design
+* WebRTC implementation
+* Payment gateway integration
+* Cloud deployment
